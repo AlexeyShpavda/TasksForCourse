@@ -19,7 +19,7 @@ namespace Task4
             Console.Write("Enter the sentence --> ");
             string sentence = Console.ReadLine();
             
-            Console.WriteLine("Number of words in sentence -- {0}", Sentence.CountNumberOfWords(sentence));
+            Console.WriteLine("Number of words in sentence - {0}", Sentence.CountNumberOfWords(sentence));
 
             Console.WriteLine("Sorted word list:");
             List<string> w = Sentence.sortWords(sentence);
