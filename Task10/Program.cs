@@ -1,23 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task10
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             /*
             Написать программу, составляющую всевозможные комбинации 3-х
             значных чисел из 3-х введенных пользователем цифр. Цифры
             вводятся вручную.
             */
-            int arraySize = 3;
-            int[] array = new int[arraySize];
-            for (var indexOfElement = 0; indexOfElement < arraySize; indexOfElement++) 
+
+            Console.Write("Enter the number of digit for combinations --> ");
+            int numberOfDigit = Int32.Parse(Console.ReadLine());
+            //int numberOfDigit = 3;
+
+            int[] array = new int[numberOfDigit];
+            for (var indexOfElement = 0; indexOfElement < numberOfDigit; indexOfElement++) 
             {
                 Console.Write("Enter {0} digit --> ", indexOfElement + 1);
                 array[indexOfElement] = Int32.Parse(Console.ReadLine());
@@ -26,8 +26,6 @@ namespace Task10
             cycle(array, 0);
 
             Console.ReadKey();
-
-
         }
 
         public static void cycle(int[] array, int counter)

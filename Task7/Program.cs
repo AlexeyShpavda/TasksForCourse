@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task7
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             /*
             Написать программу, которая рандомно генерирует массив 2-ух
@@ -28,7 +25,12 @@ namespace Task7
                 array[arrayElementIndex] = random.Next(10, 99);
             }
 
-            Console.WriteLine("Max - {0}", array.Max());
+            //for (var arrayElementIndex = 0; arrayElementIndex < sizeOfArray; arrayElementIndex++)
+            //{
+            //    Console.Write("{0} ", array[arrayElementIndex]);
+            //}
+
+            Console.WriteLine("\nMax - {0}", array.Max());
             Console.WriteLine("Min - {0}", array.Min());
 
             Console.ReadKey();

@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task8
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             /*
             Написать программу, которая в последовательности от 0 до N,
@@ -16,26 +12,27 @@ namespace Task8
             оригинальному).Длина последовательности вводится вручную и не
             должна превышать 100.
             */
-            int sizeOfArray;
+
+            int sequenceLength;
             while (true)
             {
-                Console.Write("Enter an integer less than 100 --> ");
-                bool isInteger = Int32.TryParse(Console.ReadLine(), out sizeOfArray);
-                if (isInteger && (sizeOfArray < 100)) break;
+                Console.Write("Enter sequence length less than 100 --> ");
+                bool isInteger = Int32.TryParse(Console.ReadLine(), out sequenceLength);
+                if (isInteger && (sequenceLength < 100)) break;
                 else
                 {
                     Console.Write("ERROR!");
                 }
             }
 
-            int[] array = new int[sizeOfArray];
+            int[] sequence = new int[sequenceLength];
 
-            for(var indexOfElement = 0; indexOfElement < sizeOfArray; indexOfElement++)
+            for(var indexOfElement = 0; indexOfElement < sequenceLength; indexOfElement++)
             {
-                array[indexOfElement] = 2 * (indexOfElement + 1) - 1;
+                sequence[indexOfElement] = 2 * (indexOfElement + 1) - 1;
             }
 
-            foreach(int el in array)
+            foreach(int el in sequence)
             {
                 if (Number.isPalindrome(Convert.ToString(el)))
                 {

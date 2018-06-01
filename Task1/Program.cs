@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task1
 {
@@ -31,6 +27,7 @@ namespace Task1
 
             bool isEven = Integer.IsEven(number);
             Console.WriteLine("Is number Even? {0}", isEven);
+
             bool isPrime = Integer.IsPrime(number);
             Console.WriteLine("Is number Prime? {0}", isPrime);
 
