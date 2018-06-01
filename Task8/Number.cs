@@ -12,7 +12,7 @@ namespace Task8
         {
             for (var digitIndex = 0; digitIndex < number.Length / 2; digitIndex++)
             {
-                if (char.ToLower(number[digitIndex]) != char.ToLower(number[number.Length - digitIndex - 1]))
+                if (number[digitIndex] != number[number.Length - digitIndex - 1])
                 {
                     return false;
                 }
